@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 40px;
+            width: 40px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 27px;
+            margin: 22px;
+            background-color: aqua;
+            color: red;
+            font-weight: bolder;
+        }
+
+        input {
+            height: 40px;
+            width: 200px;
+            background-color: azure;
+        }
+
+        button {
+            height: 40px;
+            width: 94px;
+            border-radius: 11px;
+            background-color: aqua;
+            font-weight: bolder;
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number">
+    <button>Set Time</button>
+    <button id="snooze">snooze</button>
+    <div></div>
+    <audio src=""></audio>
+    <script>
+
+        let div = document.querySelector("div")
+        let input = document.querySelector("input")
+        let btn1=document.querySelector("button")
+        let btn2=document.getElementById("snooze")
+        let audio = document.querySelector("audio")
+       btn1.addEventListener("click",function(){
+        let i=input.value
+       let interval= setInterval(() => {
+            i--
+            if(i==0){
+                clearInterval(interval)
+                audio.src="ringtone.mp3"
+                audio.autoplay=true
+                audio.loop=true
+                
+            }
+            div.innerHTML=i
+        
+        }, 1000);
+        i--
+        
+       })
+        
+       btn2.addEventListener("click",() => {
+         audio.src=""
+       }
+       )
+
+
+    </script>
+</body>
+
+</html>
