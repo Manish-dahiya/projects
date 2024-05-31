@@ -1,0 +1,43 @@
+/* body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+} */
+body{
+    background-color: #51e2f5;
+}
+#parent{
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border: 2px solid black;
+    height: 60vh;
+    width: 40vw;
+    text-align: center;
+    background-color: #ffeb3b;
+}
+.choices button{
+    height: 100px;
+    width: 100px;
+    font-size: 59px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #51e2f5;
+}
+#result{
+    font-size: 51px;
+}
+.tie{
+    color: gray;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
