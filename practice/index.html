@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Hover Board</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container{
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 5%;
+        }
+        .square{
+            background-color: #1d1d1d;
+            box-shadow: 0 0 2px black;
+            height: 16px;
+            width: 16px;
+            margin: 2px;
+            transition: 2s ease;
+        }
+        /* this is important the styles applied on mouse over is removed instantly by mouseout */
+        .square:hover{
+            transition-duration: 0s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
